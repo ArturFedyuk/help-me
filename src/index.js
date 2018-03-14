@@ -3,7 +3,7 @@ module.exports = function count(s, pairs) {
     for (let i = 0; i < pairs.length; i++) {
         N *= Math.pow(pairs[i][0], pairs[i][1]);
     }
-    if (N >= 100000000)
+    if (N < 100000000)
         return 0;
 
     let bTemplate = s.split('');
