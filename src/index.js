@@ -14,7 +14,7 @@ module.exports = function count(s, pairs) {
         for (let j = 0; j < bTemplate.length; j++) {
             if ((NOD([k + j, N]) == 1) && ( bTemplate[j] == 1)) {
                 counter++;
-            } else if (NOD([k + j, N]) < 1 && bTemplate[j] == 0) {
+            } else if (NOD([k + j, N]) >= 1 && bTemplate[j] == 0) {
                 counter++;
             }
         }
