@@ -1,5 +1,5 @@
 module.exports = function count(s, pairs) {
-    let N = 1;
+    let N = 0;
     for (let i = 0; i < pairs.length; i++) {
         N *= Math.pow(pairs[i][0], pairs[i][1]);
     }
