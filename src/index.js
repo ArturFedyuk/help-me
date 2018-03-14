@@ -10,7 +10,7 @@ module.exports = function count(s, pairs) {
     let res = 0;
     let counter = 0;
 
-    for (let k = 0; k <= N; k++) {
+    for (let k = 1; k <= N; k++) {
         for (let j = 0; j < bTemplate.length; j++) {
             if ((NOD([k + j, N]) === 1) && ( bTemplate[j] == 1)) {
                 counter++;
@@ -30,7 +30,7 @@ module.exports = function count(s, pairs) {
 };
 function NOD(A) {
     let n = A.length, x = Math.abs(A[0]);
-    for (let i = 0; i < n; i++) {
+    for (let i = 1; i < n; i++) {
         let y = Math.abs(A[i]);
         while (x && y) {
             (x >= y) ? (x %= y) : (y %= x);
