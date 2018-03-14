@@ -33,7 +33,7 @@ function NOD(A) {
     for (let i = 1; i < n; i++) {
         let y = Math.abs(A[i]);
         while (x && y) {
-            (x > y) ? (x %= y) : (y %= x);
+            (x >= y) ? (x %= y) : (y %= x);
         }
         x += y;
     }
