@@ -3,7 +3,7 @@ module.exports = function count(s, pairs) {
     for (let i = 0; i < pairs.length; i++) {
         N *= Math.pow(pairs[i][0], pairs[i][1]);
     }
-    if (N < 100000000)
+    if (N > 100000000)
         return 0;
 
     let bTemplate = s.split('');
@@ -12,9 +12,9 @@ module.exports = function count(s, pairs) {
 
     for (let k = 1; k <= N; k++) {
         for (let j = 0; j < bTemplate.length; j++) {
-            if ((NOD([k + j, N]) === 1) && ( bTemplate[j] == 1)) {
+            if ((NOD([k + j, N]) == 1) && ( bTemplate[j] == 1)) {
                 counter++;
-            } else if (NOD([k + j, N]) > 1 && bTemplate[j] == 0) {
+            } else if (NOD([k + j, N]) < 1 && bTemplate[j] == 0) {
                 counter++;
             }
         }
